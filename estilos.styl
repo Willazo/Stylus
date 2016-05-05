@@ -1,0 +1,33 @@
+@import 'nib/vendor'
+@import 'nib/gradients'
+
+vendor-prefixes = o ms moz webkit papitas official
+body
+	background blue
+
+.btn
+	background red
+	border 1px solid orange
+	border-radius 5px
+	color white
+	text-transform uppercase
+	transition 1s background
+	&:hover
+		background green
+
+/* se puede poner .btn.yellow, pero es más eficiente identarlo y añadir justo delante & */
+	/* añadimos & porque se le anade una subclase "yellow" a la clase btn" */
+	&.yellow
+		background yellow
+		&:hover
+			background orange
+	&.gray
+		background gray
+
+/* si en el html dentro de un div padre, añadimos un span hijo, como el elemento ya se encuentra dentro*/
+/* no es neecsario añadir un & delante, solo sería identar la clase */
+.padre
+	background: linear-gradient(top, white, black);
+	padding 200px
+	.hijo
+		font-size 100px

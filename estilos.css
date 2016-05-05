@@ -1,0 +1,45 @@
+body {
+  background: #00f;
+}
+.btn {
+  background: #f00;
+  border: 1px solid #ffa500;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  color: #fff;
+  text-transform: uppercase;
+  -o-transition: 1s background;
+  -ms-transition: 1s background;
+  -moz-transition: 1s background;
+  -webkit-transition: 1s background;
+  -papitas-transition: 1s background;
+  transition: 1s background;
+}
+.btn:hover {
+  background: #008000;
+}
+/* se puede poner .btn.yellow, pero es más eficiente identarlo y añadir justo delante & */
+/* añadimos & porque se le anade una subclase "yellow" a la clase btn" */
+.yellow {
+  background: #ff0;
+}
+.yellow:hover {
+  background: #ffa500;
+}
+.gray {
+  background: #808080;
+}
+/* si en el html dentro de un div padre, añadimos un span hijo, como el elemento ya se encuentra dentro*/
+/* no es neecsario añadir un & delante, solo sería identar la clase */
+.padre {
+  background: -o-linear-gradient(top, #fff, #000);
+  background: -ms-linear-gradient(top, #fff, #000);
+  background: -moz-linear-gradient(top, #fff, #000);
+  background: -webkit-linear-gradient(top, #fff, #000);
+  background: -papitas-linear-gradient(top, #fff, #000);
+  background: linear-gradient(to bottom, #fff, #000);
+  padding: 200px;
+}
+.padre .hijo {
+  font-size: 100px;
+}
